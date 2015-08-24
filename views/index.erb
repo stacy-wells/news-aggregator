@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>News Aggregator</title>
+  </head>
+
+  <body>
+    <h1>News Aggregator</h1>
+
+    <ul>
+      <% @results.each do |submission| %>
+      <li><%= submission["title"] %></li>
+        <a href="http://<%= submission[:url] %>"> <%= submission["url"] %></a>
+        <%= submission["description"] %>
+      <% end %>
+    </ul>
+
+    <a href="articles/new">Submit yours here</a>
+  </body>
+
+
+</html>
